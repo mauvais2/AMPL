@@ -52,4 +52,4 @@ jobs:
           ./build.sh && ./install_dev.sh
           cd atomsci/ddm/test/unit
           # step 11): run unit tests
-          pytest -s -v test_prediction_order.py:test_predict_from_model
+          pytest -s -v test_prediction_order.py::test_predict_from_model
