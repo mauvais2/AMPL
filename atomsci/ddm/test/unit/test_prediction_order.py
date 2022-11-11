@@ -15,9 +15,9 @@ def test_predict_from_model():
     test that predict_from_model makes predictions in the same
     order as the input
     '''
-    if not llnl_utils.is_lc_system():
-        assert True
-        return
+    #if not llnl_utils.is_lc_system():
+    #    assert True
+    #    return
 
     model_path = '../../examples/BSEP/models/bsep_classif_scaffold_split.tar.gz'
     csv_path = '../../examples/BSEP/data/ChEMBL25_BSEP_curated_data.csv'
@@ -50,9 +50,9 @@ def test_predict_on_dataframe():
     test that predict_from_model makes predictions in the same
     order as the input
     '''
-    if not llnl_utils.is_lc_system():
-        assert True
-        return
+    #if not llnl_utils.is_lc_system():
+    #    assert True
+    #    return
 
     model_path = '../../examples/BSEP/models/bsep_classif_scaffold_split.tar.gz'
     csv_path = '../../examples/BSEP/data/ChEMBL25_BSEP_curated_data.csv'
