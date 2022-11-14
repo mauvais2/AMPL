@@ -50,10 +50,10 @@ jobs:
           pip install -U tensorflow keras
           # step 10): build 
           ./build.sh && ./install_dev.sh
-          cd atomsci/ddm/test/unit
+          cd atomsci/ddm/test/integrative/hybrid
           # step 11): run unit tests
           # pytest -s -v test_prediction_order.py::test_predict_on_dataframe
-          pytest -s -v test_num_trainable_params.py
+          # pytest -s -v test_num_trainable_params.py
           # integrative/wenzel_NN/test_wenzel_NN pytest -s -v test_wenzel_NN.py
-          # integrative/hybrid/test_hybrid.py pytest -s -v test_hybrid.py
+          pytest -s -v test_hybrid.py
           # integrative/compare_models pytest -s -v test_filesystem_perf_results.py::test_MPNN_results
