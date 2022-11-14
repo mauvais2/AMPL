@@ -250,9 +250,9 @@ def test_GraphConvModel_results():
     clean()
 
 def test_MPNN_results():
-    if not llnl_utils.is_lc_system():
-        assert True
-        return
+#    if not llnl_utils.is_lc_system():
+#        assert True
+#        return
 
     clean()
     H1_curate()
