@@ -52,8 +52,8 @@ jobs:
           ./build.sh && ./install_dev.sh
           cd atomsci/ddm/test/unit
           # step 11): run unit tests
-          pytest -s -v test_prediction_order.py::test_predict_on_dataframe()
+          pytest -s -v test_prediction_order.py::test_predict_on_dataframe
           # unit/test_num_trainable_params
-          # integrative/wenzel_NN/test_wenzel_NN pytest -s -v test_wenzel_NN.py::test()
-          # integrative/hybrid/test_hybrid.py pytest -s -v test_hybrid.py::test()
-          # integrative/compare_models pytest -s -v test_filesystem_perf_results.py::test_MPNN_results()
+          # integrative/wenzel_NN/test_wenzel_NN pytest -s -v test_wenzel_NN.py
+          # integrative/hybrid/test_hybrid.py pytest -s -v test_hybrid.py
+          # integrative/compare_models pytest -s -v test_filesystem_perf_results.py::test_MPNN_results
