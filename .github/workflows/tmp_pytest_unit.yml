@@ -52,11 +52,11 @@ jobs:
           ./build.sh && ./install_dev.sh
           cd atomsci/ddm/test/integrative/dc_models
           # step 11): run unit tests
-          # integrative/dc_models/test_retrain_dc_models.py
-          pytest -s -v test_retrain_dc_models.py
+          # integrative/dc_models/test_retrain_dc_models.py P ?
+          # pytest -s -v test_retrain_dc_models.py
           # integrative/dc_models/test_dc_models.py
           # integrative/early_stopping_tests/test_kfold_split.py
-          
+          pytest -s -v test_dc_models.py
           # pytest -s -v test_prediction_order.py::test_predict_on_dataframe
           # pytest -s -v test_num_trainable_params.py
           # integrative/wenzel_NN/test_wenzel_NN pytest -s -v test_wenzel_NN.py
