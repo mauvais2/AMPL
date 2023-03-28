@@ -1,0 +1,45 @@
+name: Run Conda Env, Pytest for unit tests
+
+on:
+  push:
+    branches: [ master ]
+    paths: # the job will run when these files pushed
+      - '**.py'
+      - '**.sh'
+      - '**.yml'
+      - 'pip/**'
+jobs:
+  test-integration-default:
+    name: Default settings
+    # step 1): setup OS
+    runs-on: ubuntu-latest
+    steps:
+      # step 2): checkout repo
+      - uses: actions/checkout@v3
+      # step 3): setup python
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: ["3.8", "3.9", "3.10"] 
+      - name: Check Python version
+        run: |
+          python --version
+      # step 4): setup cuda
+      - name: Setup Cuda
+        uses: Jimver/cuda-toolkit@v0.2.10
+        id: cuda-toolkit
+        with:
+          cuda: '11.7.0'
+      # step 5): pip install
+      - name: Create conda env
+        run: |
+          # step 6): pip install AMPL package list
+          export PYTHONUSERBASE=./atomsci
+          python -m pip install --upgrade pip
+          pip install -r pip/requirements.txt
+          # step 7): build 
+          ./build.sh
+          pip3 install -e .
+          cd atomsci/ddm/test/unit
+          # step 8): run unit tests
+          pytest -s -v test_prediction_order.py::test_predict_from_model
