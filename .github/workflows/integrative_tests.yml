@@ -36,7 +36,7 @@ jobs:
         run: |
           # step 8): pip install AMPL package list
           python -m pip install --upgrade pip
-          pip install -r pip/pip_requirements.txt
+          pip install -r pip/requirements.txt
           # step 10): build 
           ./build.sh
           pip3 install -e .
