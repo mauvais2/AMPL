@@ -1,4 +1,4 @@
-name: Run Pytest for AMPL unit tests
+name: Run Pytest for AMPL integegrative tests
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - '**.yml'
       - 'pip/**'
 jobs:
-  test-unit-default:
+  test-integration-default:
     name: Default settings
     # step 1): setup OS
     runs-on: ubuntu-latest
@@ -20,21 +20,28 @@ jobs:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: 3.9
       - name: Check Python version
         run: |
           python --version
           df -h
-      # step 4): pip install
-      - name: Create pip env and run test
+      # step 5): setup cuda
+      #- name: Setup Cuda
+      #  uses: Jimver/cuda-toolkit@v0.2.5
+      #  id: cuda-toolkit
+      #  with:
+      #    cuda: '11.5.1'
+      # step 6): create conda env, pip install
+      - name: Pip install & run tests
         run: |
-          # step 5): pip install AMPL package list
-          export PYTHONUSERBASE=./atomsci
+          # step 8): pip install AMPL package list
           python -m pip install --upgrade pip
-          pip install -r pip/requirements.txt
-          # step 6): build 
+          pip install -r pip/pip_requirements.txt
+          # step 10): build 
           ./build.sh
           pip3 install -e .
-          cd atomsci/ddm/test/unit
-          # step 7): run unit tests
+          # step 11): run test 
+          cd atomsci/ddm/test/integrative
+          cd dc_models
           pytest 
+          #bash integrative_batch_tests.sh
