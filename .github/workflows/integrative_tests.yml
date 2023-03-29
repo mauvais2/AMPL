@@ -26,11 +26,11 @@ jobs:
           python --version
           df -h
       # step 5): setup cuda
-      #- name: Setup Cuda
-      #  uses: Jimver/cuda-toolkit@v0.2.5
-      #  id: cuda-toolkit
-      #  with:
-      #    cuda: '11.5.1'
+      - name: Setup Cuda
+        uses: Jimver/cuda-toolkit@v0.2.10
+        id: cuda-toolkit
+        with:
+          cuda: '11.7.0'
       # step 6): create conda env, pip install
       - name: Pip install & run tests
         run: |
