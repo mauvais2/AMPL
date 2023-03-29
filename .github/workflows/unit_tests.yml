@@ -25,11 +25,11 @@ jobs:
         run: |
           python --version
       # step 4): set up cuda
-      - name: Setup Cuda
-        uses: Jimver/cuda-toolkit@v0.2.10
-        id: cuda-toolkit
-        with:
-          cuda: '11.7.0'
+      #      - name: Setup Cuda
+      #  uses: Jimver/cuda-toolkit@v0.2.10
+      #  id: cuda-toolkit
+      #  with:
+      #    cuda: '11.7.0'
       # step 5): pip install
       - name: Create pip env
         run: |
