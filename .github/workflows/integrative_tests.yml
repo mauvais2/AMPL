@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.9
       - name: Check Python version
         run: |
           python --version
@@ -42,6 +42,4 @@ jobs:
           pip3 install -e .
           # step 11): run test 
           cd atomsci/ddm/test/integrative
-          cd dc_models
-          pytest 
-          #bash integrative_batch_tests.sh
+          bash integrative_batch_tests.sh
