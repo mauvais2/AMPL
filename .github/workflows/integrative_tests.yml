@@ -13,6 +13,8 @@ jobs:
     name: Default settings
     # step 1): setup OS
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
     steps:
       # step 2): checkout repo
       - uses: actions/checkout@v3
