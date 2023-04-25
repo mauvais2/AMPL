@@ -56,6 +56,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 python-dateutil==2.8.2
 pytest==6.2.1
+pytest-forked
 PyYAML==5.4
 pytz==2022.7.1
 rdkit==2022.9.3
