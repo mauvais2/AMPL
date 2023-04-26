@@ -8,7 +8,7 @@ for f in *; do
          if [[ -f "$file" ]]; then
             cd ${f}
             echo "Testing $f"
-            pytest
+            pytest 
             cd ..
         fi
     fi
