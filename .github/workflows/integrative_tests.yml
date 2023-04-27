@@ -44,5 +44,13 @@ jobs:
           pip3 install -e .
           # step 11): run test 
           cd atomsci/ddm/test/integrative
-          cd dc_models
-          pytest test_reg_config_H1_fit_GCNModel.py
+          cd delaney_NN
+          pytest
+          cd ../delaney_Panel
+          pytest
+          cd ../delaney_RF
+          pytest
+          cd ../delaney_XGB
+          pytest
+          cd ../early_stopping_tests
+          pytest
