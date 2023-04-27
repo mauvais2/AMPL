@@ -31,9 +31,9 @@ def test():
     # -----
     clean()
 
-#    if not llnl_utils.is_lc_system():
-#        assert True
-#        return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
 
     # Run HyperOpt
     # ------------

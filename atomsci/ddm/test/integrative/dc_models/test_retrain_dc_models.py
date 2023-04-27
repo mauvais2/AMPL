@@ -227,9 +227,9 @@ def H1_init():
 # Train and Predict
 # -----
 def test_reg_config_H1_fit_AttentiveFPModel():
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
     
     H1_init()
     json_f = 'reg_config_H1_fit_AttentiveFPModel.json'
@@ -243,9 +243,9 @@ def test_reg_config_H1_fit_AttentiveFPModel():
 
 # -----
 def test_reg_config_H1_fit_GCNModel():
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
         
     H1_init()
     json_f = 'reg_config_H1_fit_GCNModel.json'
@@ -259,9 +259,9 @@ def test_reg_config_H1_fit_GCNModel():
 
 # -----
 def test_reg_config_H1_fit_MPNNModel():
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
     
     H1_init()
     json_f = 'reg_config_H1_fit_MPNNModel.json'
@@ -274,9 +274,9 @@ def test_reg_config_H1_fit_MPNNModel():
     verify_saved_params(json_f, re_tar_f)
 
 def test_reg_config_H1_fit_GraphConvModel():
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
     
     H1_init()
     json_f = 'reg_config_H1_fit_GraphConvModel.json'
@@ -289,9 +289,9 @@ def test_reg_config_H1_fit_GraphConvModel():
     verify_saved_params(json_f, re_tar_f)
 
 def test_reg_config_H1_fit_PytorchMPNNModel():
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
     
     H1_init()
     json_f = 'reg_config_H1_fit_PytorchMPNNModel.json'

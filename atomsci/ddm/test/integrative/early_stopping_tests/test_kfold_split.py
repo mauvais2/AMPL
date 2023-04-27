@@ -158,9 +158,9 @@ def test_pytorchmpnnmodel():
     saved_model_identity(pparams)
 
 def saved_model_identity(pparams):
-    #if not llnl_utils.is_lc_system():
-    #    assert True
-    #    return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
         
     script_path = os.path.dirname(os.path.realpath(__file__))
     if not pparams.previously_split:

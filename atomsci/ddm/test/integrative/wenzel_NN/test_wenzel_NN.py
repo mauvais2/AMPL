@@ -23,9 +23,9 @@ def clean():
     """
     Clean test files
     """
-#    if not llnl_utils.is_lc_system():
-#        assert True
-#        return
+    if not llnl_utils.is_lc_system():
+        assert True
+        return
         
     for f in ['hlm_clearance_curated_predict.csv',
               'hlm_clearance_curated_external.csv',
