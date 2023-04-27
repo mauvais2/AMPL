@@ -44,5 +44,5 @@ jobs:
           pip3 install -e .
           # step 11): run test 
           cd atomsci/ddm/test/integrative
-          cd compare_models
+          cd dc_models
           pytest 
