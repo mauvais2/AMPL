@@ -44,8 +44,9 @@ jobs:
           pip3 install -e .
           # step 11): run test 
           cd atomsci/ddm/test/integrative
+          bash integrative_batch_tests.sh
           #cd delaney_NN
-          pytest
+          #pytest
           #cd ../delaney_Panel
           #pytest
           #cd delaney_RF
