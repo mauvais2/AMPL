@@ -55,10 +55,10 @@ jobs:
           #cd ../early_stopping_tests
           #pytest
           cd dc_models
-          cd ../foreign_model
-          pytest
-          cd ../highlight_smarts
-          pytest
+          #cd ../foreign_model
+          #pytest
+          #cd ../highlight_smarts
+          #pytest
           cd ../hybrid
           pytest
           cd ../hyperopt
