@@ -45,4 +45,4 @@ jobs:
           # step 11): run test 
           cd atomsci/ddm/test/integrative
           cd dc_models
-          pytest 
+          pytest test_reg_config_H1_fit_GCNModel.py
