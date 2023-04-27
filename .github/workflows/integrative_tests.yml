@@ -48,13 +48,27 @@ jobs:
           #pytest
           #cd ../delaney_Panel
           #pytest
-          cd delaney_RF
-          pytest
-          cd ../delaney_XGB
-          pytest
-          cd ../early_stopping_tests
-          pytest
+          #cd delaney_RF
+          #pytest
+          #cd ../delaney_XGB
+          #pytest
+          #cd ../early_stopping_tests
+          #pytest
           cd ../foreign_model
           pytest
           cd ../highlight_smarts
+          pytest
+          cd ../hybrid
+          pytest
+          cd ../hyperopt
+          pytest
+          cd ../hyperparam_search
+          pytest
+          cd ../maestro
+          pytest
+          cd ../multitask_split
+          pytest
+          cd ../random_seed
+          pytest
+          cd ../shortlist_test
           pytest
