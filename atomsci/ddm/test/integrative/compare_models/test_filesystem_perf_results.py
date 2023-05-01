@@ -177,27 +177,27 @@ def test_XGB_results():
 
     clean()
 
-# def test_AttentiveFP_results():
-#     clean()
-#     H1_curate()
-#     json_f = 'jsons/reg_config_H1_fit_AttentiveFPModel.json'
+def test_AttentiveFP_results():
+    clean()
+    H1_curate()
+    json_f = 'jsons/reg_config_H1_fit_AttentiveFPModel.json'
 
-#     df1, df2, model_info = all_similar_tests(json_f, 'H1')
+    df1, df2, model_info = all_similar_tests(json_f, 'H1')
 
-#     # don't compare best_epoch
-#     model_params = json.loads(model_info['model_parameters_dict'])
-#     del model_params['best_epoch']
-#     assert model_params == {
-#         "max_epochs": 5,
-#         "AttentiveFPModel_mode":"regression",
-#         "AttentiveFPModel_num_layers":3,
-#         "AttentiveFPModel_learning_rate": 0.0007,
-#         "AttentiveFPModel_model_dir": "result",
-#         "AttentiveFPModel_n_tasks": 1,}
+    # don't compare best_epoch
+    model_params = json.loads(model_info['model_parameters_dict'])
+    del model_params['best_epoch']
+    assert model_params == {
+        "max_epochs": 5,
+        "AttentiveFPModel_mode":"regression",
+        "AttentiveFPModel_num_layers":3,
+        "AttentiveFPModel_learning_rate": 0.0007,
+        "AttentiveFPModel_model_dir": "result",
+        "AttentiveFPModel_n_tasks": 1,}
 
-#     assert json.loads(model_info['feat_parameters_dict']) == {"MolGraphConvFeaturizer_use_edges":"True",}
+    assert json.loads(model_info['feat_parameters_dict']) == {"MolGraphConvFeaturizer_use_edges":"True",}
 
-#     clean()
+    clean()
 
 def test_GCN_results():
     clean()
