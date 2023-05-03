@@ -34,7 +34,7 @@
     "comment": "----------------------------------------",
     "model_type": "AttentiveFPModel",
     "AttentiveFPModel_num_layers":"3",
-    "AttentiveFPModel_learning_rate": "0.0007",
+    "AttentiveFPModel_learning_rate": "0.0003",
     "AttentiveFPModel_n_tasks": "1",
 
     "comment": "Training",
