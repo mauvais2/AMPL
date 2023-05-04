@@ -17,9 +17,9 @@ def test_reg_config_H1_fit_GCNModel():
     H1_init()
     train_and_predict('reg_config_H1_fit_GCNModel.json', prefix='H1') # crashes during run
 # -----
-#def test_reg_config_H1_fit_MPNNModel():
-#    H1_init()
-#    train_and_predict('reg_config_H1_fit_MPNNModel.json', prefix='H1') # crashes during run
+def test_reg_config_H1_fit_MPNNModel():
+    H1_init()
+    train_and_predict('reg_config_H1_fit_MPNNModel.json', prefix='H1') # crashes during run
 
 def test_reg_config_H1_fit_GraphConvModel():
     H1_init()
