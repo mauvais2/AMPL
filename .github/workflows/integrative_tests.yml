@@ -45,7 +45,7 @@ jobs:
           # step 11): run test 
           cd atomsci/ddm/test/integrative
           # bash integrative_batch_tests.sh
-          cd dc_models
+          cd compare_models
           # added test
           pytest test_filesystem_perf_results.py::test_AttentiveFP_results
           #cd delaney_NN
