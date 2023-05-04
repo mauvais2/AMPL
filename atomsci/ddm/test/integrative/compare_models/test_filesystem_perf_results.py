@@ -191,7 +191,7 @@ def test_AttentiveFP_results():
         "max_epochs": 5,
         "AttentiveFPModel_mode":"regression",
         "AttentiveFPModel_num_layers":3,
-        "AttentiveFPModel_learning_rate": 0.0007,
+        "AttentiveFPModel_learning_rate": 0.0003,
         "AttentiveFPModel_model_dir": "result",
         "AttentiveFPModel_n_tasks": 1,}
 
