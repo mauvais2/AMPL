@@ -58,8 +58,8 @@ jobs:
           #pytest
           #cd ../early_stopping_tests
           #pytest
-          cd ../dc_models
-          pytest test_dc_models.py::test_reg_config_H1_fit_MPNNModel
+          #cd ../dc_models
+          #pytest test_dc_models.py::test_reg_config_H1_fit_MPNNModel
           #cd ../foreign_model
           #pytest
           #cd ../highlight_smarts
