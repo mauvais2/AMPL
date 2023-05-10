@@ -193,8 +193,7 @@ def test_AttentiveFP_results():
         "AttentiveFPModel_num_layers":3,
         "AttentiveFPModel_learning_rate": 0.0007,
         "AttentiveFPModel_model_dir": "result",
-        "AttentiveFPModel_n_tasks": 1,
-        "batch_size": 50}
+        "AttentiveFPModel_n_tasks": 1,}
 
     assert json.loads(model_info['feat_parameters_dict']) == {"MolGraphConvFeaturizer_use_edges":"True",}
 
