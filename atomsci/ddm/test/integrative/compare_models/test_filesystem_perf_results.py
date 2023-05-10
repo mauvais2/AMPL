@@ -297,7 +297,7 @@ if __name__ == '__main__':
     test_RF_results()
     test_NN_results()
     test_XGB_results()
-    # test_AttentiveFP_results()
+    test_AttentiveFP_results()
     test_GCN_results()
     test_GraphConvModel_results()
     test_MPNN_results()
