@@ -33,8 +33,8 @@
     "model_type": "MPNNModel",
     "MPNNModel_mode": "regression",
     "comment": "these features are set specifically for the WeaveFeaturizer",
-    "MPNNModel_n_atom_feat": "70",
-    "MPNNModel_n_pair_feat": "8",
+    "MPNNModel_n_atom_feat": "75",
+    "MPNNModel_n_pair_feat": "14",
     "batch_size": 10,
 
     "comment": "Training",
