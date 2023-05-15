@@ -6,6 +6,7 @@ on:
     paths: # the job will run when these files pushed
       - '**.py'
       - '**.sh'
+      - '**.json'
       - '**.yml'
       - 'pip/**'
 jobs:
