@@ -512,10 +512,10 @@ cd ../../..
 &nbsp;  
 
 <a name="flux-tests"></a>
-### [Running Flux tests](./run_flux.md)
+### [Running Flux tests](/run_flux.md)
 
 <a name="gpu-tests"></a>
-### [Running TensorFlow Using GPU](./run_tf_gpu.md)
+### [Running TensorFlow Using GPU](/run_tf_gpu.md)
 
 ---
 <a name="Development"></a>
