@@ -37,6 +37,10 @@ Documentation in readthedocs format is available [here](https://ampl.readthedocs
 - [Advanced AMPL usage](#Advanced-AMPL-usage)
 - [Advanced installation](#Advanced-installation)
 - [Advanced testing](#Advanced-testing)
+  - [Running all tests](#all-tests)
+  - [Running SLURM Tests](#slurm-tests)
+  - [Running Flux Tests](#flux-tests)
+  - [Running TensorFlow Using GPU](#gpu-tests)
 - [Development](#Development)
 - [Project information](#Project-information)  
 - [Suggestions or Report Issues](#suggestions-issues)
@@ -150,7 +154,7 @@ pip3 install --force-reinstall --no-use-pep517 -r requirements.txt
 &nbsp;
 
 #### Install AMPL
-If you're an `AMPL` developer and want the installed `AMPL` package to link back to your cloned git repo, Run the following to build. 
+Run the following to build/package the `atomsci` modules. This is required.
 
 Here `$GITHOME` refers to the parent of your `AMPL` git working directory.
 
@@ -344,7 +348,7 @@ AMPL includes many parameters to run various model fitting and prediction tasks.
 
 <a name="Library-documentation"></a>
 ### Library documentation
-AMPL includes detailed docstrings and comments to explain the modules. Full HTML documentation of the Python library is available with the package at [atomsci/ddm/docs/build/html/index.html](atomsci/ddm/docs/build/html/index.html).  
+AMPL includes detailed docstrings and comments to explain the modules. Full HTML documentation of the Python library is available with the package at [https://ampl.readthedocs.io/en/latest/](https://ampl.readthedocs.io/en/latest/).
 &nbsp;  
 
 ### More information on AMPL usage
@@ -360,10 +364,19 @@ AMPL includes detailed docstrings and comments to explain the modules. Full HTML
 ### Command line
 AMPL can **fit** models from the command line with:
 ```
-python model_pipeline.py --config_file test.json
+python model_pipeline.py --config_file filename.json # [filename].json is the name of the config file
 ```  
 &nbsp;  
 
+To get more info on an AMPL config file, please refer to:
+
+  - [AMPL Features](https://github.com/ATOMScience-org/AMPL#ampl-features)
+  - [Running AMPL](https://github.com/ATOMScience-org/AMPL#running-ampl)
+  - [AMPL Tutorials](atomsci/ddm/examples/tutorials)
+     - [10_Delaney_Solubility_Prediction.ipynb](atomsci/ddm/examples/tutorials/10_Delaney_Solubility_Prediction.ipynb)
+     - [11_CHEMBL26_SCN5A_IC50_prediction.ipynb](atomsci/ddm/examples/tutorials/11_CHEMBL26_SCN5A_IC50_prediction.ipynb)
+
+&nbsp;
 ### Hyperparameter optimization
 Hyperparameter optimization for AMPL model fitting is available to run on SLURM clusters or with [HyperOpt](https://hyperopt.github.io/hyperopt/) (Bayesian Optimization). To run Bayesian Optimization, the following steps can be followed.
 
@@ -448,6 +461,8 @@ pip uninstall atomsci-ampl
 ---
 <a name="Advanced-testing"></a>
 ## Advanced testing
+
+<a name="all-tests"></a>
 ### Running all tests
 To run the full set of tests, use Pytest from the test directory:
 ```
@@ -459,6 +474,7 @@ pytest
 ```
 &nbsp;  
 
+<a name="slurm-tests"></a>
 ### Running SLURM tests
 Several of the tests take some time to fit. These tests can be submitted to a SLURM cluster as a batch job. Example general SLURM submit scripts are included as `pytest_slurm.sh`.
 
@@ -495,6 +511,11 @@ cd ../../..
 &nbsp;  
 &nbsp;  
 
+<a name="flux-tests"></a>
+### [Running Flux tests](./run_flux.md)
+
+<a name="gpu-tests"></a>
+### [Running TensorFlow Using GPU](./run_tf_gpu.md)
 
 ---
 <a name="Development"></a>
@@ -511,7 +532,7 @@ This will create a namespace package in your environment directory that points b
 &nbsp;  
 
 ### Code Push Policy
-It's recommended to use a development branch to do the work. After each release, there will be a development branch opened for development. 
+It's recommended to use a development branch to do the work. After each release, there will be a branch opened for development.
 
 The policy is 
 
