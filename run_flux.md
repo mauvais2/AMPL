@@ -34,6 +34,7 @@
    module load cuda/11.3.0     # load the Cuda
    ```
 
+   <a name="amd"></a>
    If using *AMD*
 
    ```
